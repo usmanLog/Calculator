@@ -3,6 +3,7 @@ import {
   handleOperations,
   handleClear,
   handleEquals,
+  handleDelete,
 } from "../features/calcSlice";
 import { useDispatch } from "react-redux";
 
@@ -56,6 +57,14 @@ export function Operators() {
         id="equals"
       >
         =
+      </button>
+      <button
+        id="delete"
+        onClick={({ target }) =>
+          dispatch(handleDelete(target.innerHTML.toLowerCase()))
+        }
+      >
+        C
       </button>
     </>
   );

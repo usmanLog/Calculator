@@ -168,6 +168,16 @@ export const calcSlice = createSlice({
         }
       }
     },
+
+    handleDelete: (state, action) => {
+      if (action.payload === "c") {
+        state.currVal = state.currVal
+          .split("")
+          .slice(0, -1)
+          .join("")
+          .toString();
+      }
+    },
   },
 });
 
@@ -177,7 +187,12 @@ export const selectPrevVal = (state) => state.calc.prevVal;
 export const selectSign = (state) =>
   state.calc.lastTyped === state.calc.prevOperand ? state.calc.prevOperand : "";
 
-export const { displayNumbers, handleOperations, handleClear, handleEquals } =
-  calcSlice.actions;
+export const {
+  displayNumbers,
+  handleOperations,
+  handleClear,
+  handleEquals,
+  handleDelete,
+} = calcSlice.actions;
 
 export default calcSlice.reducer;

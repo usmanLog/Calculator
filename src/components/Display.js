@@ -17,7 +17,13 @@ export function Display() {
         0
       </div> */}
       <div id="display" className="currCharacters">
-        {currVal ? currVal : sign && !currVal ? sign : prevVal}
+        {currVal
+          ? currVal
+          : sign && !currVal
+          ? sign
+          : !currVal && !prevVal && !sign
+          ? "0"
+          : prevVal}
       </div>
     </div>
   );

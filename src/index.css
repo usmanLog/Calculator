@@ -61,10 +61,10 @@ code {
   padding: 10px;
   overflow: hidden;
   grid-template-areas:
-    "ac ac d m"
-    "sev ate nine min"
-    "for fiv six pl"
-    "one two ree eq"
+    "ac ac del d"
+    "sev ate nine m"
+    "for fiv six min"
+    "one two ree pl"
     "ro ro dec eq";
 }
 
@@ -140,6 +140,12 @@ code {
 
 #decimal {
   grid-area: dec;
+}
+
+#delete {
+  grid-area: del;
+  background-color: rgb(231, 132, 132);
+  color: white;
 }
 
 button {
