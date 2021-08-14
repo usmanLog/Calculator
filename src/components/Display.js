@@ -1,16 +1,23 @@
 import React from "react";
+import {
+  selectCurrVal,
+  selectPrevVal,
+  selectSign,
+} from "../features/calcSlice";
 import { useSelector } from "react-redux";
-import { selectNumbers } from "../features/calcSlice";
 
 export function Display() {
-  const currNumbers = useSelector(selectNumbers);
+  const currVal = useSelector(selectCurrVal);
+  const prevVal = useSelector(selectPrevVal);
+  const sign = useSelector(selectSign);
+
   return (
     <div className="displayWrapper">
-      <div id="display" className="allCharacters">
+      {/* <div id="display" className="allCharacters">
         0
-      </div>
+      </div> */}
       <div id="display" className="currCharacters">
-        {currNumbers}
+        {currVal ? currVal : sign && !currVal ? sign : prevVal}
       </div>
     </div>
   );
