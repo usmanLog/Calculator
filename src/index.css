@@ -17,6 +17,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -158,4 +159,13 @@ button {
 
 button:hover {
   opacity: 0.95;
+}
+
+.credits {
+  color: white;
+  font-size: 1.3rem;
+}
+
+a {
+  color: white;
 }

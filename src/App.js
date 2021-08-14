@@ -13,6 +13,16 @@ function App() {
           <Numbers />
         </div>
       </section>
+      <p className="credits">
+        Coded By{" "}
+        <a
+          href="https://github.com/usmanLog/Calculator"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Usman
+        </a>
+      </p>
     </main>
   );
 }
