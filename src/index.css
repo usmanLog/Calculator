@@ -22,8 +22,8 @@ code {
 
 .wrapper {
   height: 435px;
-  min-width: 280px;
-  width: 325px;
+  min-width: 270px;
+  max-width: 325px;
   background-color: rgb(207, 204, 204);
   box-shadow: 2px 2px 8px 6px rgba(255, 255, 255, 0.1);
   border-radius: 5px;
